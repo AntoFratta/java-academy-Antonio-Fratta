@@ -10,12 +10,12 @@ public class Calciatore implements GiocatoreProfessionista {
 	private String luogo_di_nascita;
 	private String squadra;
 	private String ruolo;
-	private String costo_cartellino;
+	private double costo_cartellino;
 	private String anni_di_contratto;
 	private double stipendio_annuo;
 
 	public Calciatore(String nome, String cognome, String anno_di_nascita, String luogo_di_nascita, String squadra,
-			String ruolo, String costo_cartellino, String anni_di_contratto, double stipendio_annuo) {
+			String ruolo, double costo_cartellino, String anni_di_contratto, double stipendio_annuo) {
 		super();
 		this.nome = nome;
 		this.cognome = cognome;
@@ -76,11 +76,11 @@ public class Calciatore implements GiocatoreProfessionista {
 		this.ruolo = ruolo;
 	}
 
-	public String getCosto_cartellino() {
+	public double getCosto_cartellino() {
 		return costo_cartellino;
 	}
 
-	public void setCosto_cartellino(String costo_cartellino) {
+	public void setCosto_cartellino(double costo_cartellino) {
 		this.costo_cartellino = costo_cartellino;
 	}
 
