@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Es4_day3</title>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const request = new XMLHttpRequest();
+      var url = 'http://cicacademy2023.ddns.net/esercizi/get';
+      request.open('GET', url, true);
+      request.onload = function() {
+        try {
+          if (request.status === 200) {
+            var data = JSON.parse(request.responseText);
+            document.getElementById('specializzazione').innerHTML = data.specializzazione;
+            document.getElementById('contesto').innerHTML = data.contesto;
+          }
+        } catch (error) {
+          alert('Errore');
+        }
+      };
+      request.send();
+    });
+  </script>
+</head>
+<body>
+	<p id="specializzazione"></p>
+	<p id="contesto"></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Es2_day3_pag2</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h3>Risultati:</h3>
+    <p>Input 1: <span id="result1"></span></p>
+    <p>Input 2: <span id="result2"></span></p>
+    <p>Input 3: <span id="result3"></span></p>
+  </div>
+
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+
+  document.getElementById('result1').innerHTML = urlParams.get('input1');
+  document.getElementById('result2').innerHTML = urlParams.get('input2');
+  document.getElementById('result3').innerHTML = urlParams.get('input3');
+  </script>
+</body>
+</html>

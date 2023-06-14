@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Es3_day3</title>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var json = {
+      "success": true,
+      "data": {
+        "specializzazione": "Design",
+        "ambito": {
+          "contesto": "Enterprise"
+        }
+      }
+    };
+
+    var specializzazione = json.data.specializzazione;
+    var contesto = json.data.ambito.contesto;
+
+    document.getElementById('specializzazione').innerHTML = specializzazione;
+    document.getElementById('contesto').innerHTML = contesto;
+  });
+</script>
+</head>
+<body>
+  <p id="specializzazione"></p>
+  <p id="contesto"></p>
+</body>
+</html>

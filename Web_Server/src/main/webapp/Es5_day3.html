@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Es5_day3</title>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var request = new XMLHttpRequest();
+      var username = "pippo";
+      var url = 'http://cicacademy2023.ddns.net/esercizi/getParam';
+      request.open('GET', url + '?username=' + username, true);
+      request.onload = function() {
+        try {
+          if (request.status === 200) {
+            var data = JSON.parse(request.responseText);
+            document.getElementById('specializzazione').innerHTML = data.specializzazione;
+            document.getElementById('contesto').innerHTML = data.contesto;
+          }
+        } catch (error) {
+          alert('Errore');
+        }
+      };
+      request.send();
+    });
+  </script>
+</head>
+<body>
+	<p id="specializzazione"></p>
+	<p id="contesto"></p>
+</body>
+</html>
